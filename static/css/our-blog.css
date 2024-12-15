@@ -1,0 +1,98 @@
+.video {
+    max-width: 400px;
+}
+
+main {
+	width: 100%;
+}
+
+.nav {
+	margin-bottom: 0;
+}
+
+.head-section {
+	border-bottom: 1px solid var(--grayscale-grey);
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.head-section-info {
+	display: grid;
+	gap: 12px;
+}
+
+.head-section-info h1 {
+	font: var(--heading1);
+	color: var(--grayscale-black);
+}
+
+.breadcrumbs {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 4px;
+}
+
+.breadcrumb {
+	font: var(--button1);
+	color: var(--grayscale-grey);
+}
+
+.breadcrumb.active {
+	color: var(--main-orange);
+}
+
+/* Bloom & Grow blog */
+.bloom-grow-blog-section {
+    display: grid;
+    gap: 64px;
+}
+
+.bloom-grow-blog-section h2 {
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.blog-filters {
+	display: flex;
+	gap: 24px;
+	justify-content: center;
+}
+
+.blog-filter {
+	padding: 16px 32px;
+	border-radius: 99px;
+	background: #f5f5f5;
+	cursor: pointer;
+}
+
+.blog-filter.active {
+	border: 1px solid var(--main-orange);
+	background: transparent;
+}
+
+.big-blog {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 64px;
+	align-items: start;
+}
+
+.big-blog-body {
+	display: grid;
+	gap: 20px;
+}
+
+.all-blogs {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+	column-gap: 41px;
+	row-gap: 64px;
+}
+
+.blog-card > img {
+	border-radius: 24px;
+	width: 100%;
+	aspect-ratio: 11 / 7;
+	object-fit: cover;
+}

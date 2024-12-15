@@ -1,0 +1,207 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block main %}
+<section class="wrapper head-section">
+	<div class="head-section-info">
+		<h1>About Us</h1>
+		<nav class="breadcrumbs">
+			<a class="breadcrumb active" href="{% url 'home' %}">Home /</a>
+			<a class="breadcrumb" href="#">About Us</a>
+		</nav>
+	</div>
+</section>
+<section class="about-main-section">
+	<div class="wrapper">
+		<div class="about-main">
+			<div class="about-main-content">
+				<div class="about-main-info">
+					<h1 class="section-title">Welcome to our heaven Bloom & Grow</h1>
+					<p class="text">
+						At Bloom & Grow, we are passionate about plants and bringing the
+						beauty of nature into people's homes and workplaces. Our plant shop
+						has been serving the pontianak community for 12 years, and we pride
+						ourselves on our extensive selection of high-quality plants and our
+						commitment to excellent customer service.
+					</p>
+					<p class="text">
+						Our knowledgeable staff are dedicated to helping our customers find
+						the perfect plant for their needs, whether it's a low-maintenance
+						succulent or a lush indoor tree. We also offer a range of plant care
+						products and accessories to help our customers keep their plants
+						healthy and thriving.
+					</p>
+				</div>
+				<div class="about-main-labels">
+					<div class="about-main-label">
+						<h4>12+</h4>
+						<p class="text">Year Experience</p>
+					</div>
+					<div class="about-main-label">
+						<h4>35+</h4>
+						<p class="text">Store</p>
+					</div>
+					<div class="about-main-label">
+						<h4>321k+</h4>
+						<p class="text">Satisfied client</p>
+					</div>
+				</div>
+				<div class="about-main-btns">
+					<div class="header-section-btns">
+						<a href="#">Contact us</a>
+						<a href="#">Learn More</a>
+					</div>
+				</div>
+			</div>
+			<div class="about-main-imgs">
+				<img src="{% static 'assets/images/about-main-img.jpeg' %}" alt="" />
+				<img src="{% static '/assets/images/about-main-img2.jpeg' %}" alt="" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-video-section wrapper">
+	<div class="about-video-info">
+		<h2 class="section-title">Our Mission to Provide High-Quality Plants</h2>
+		<p class="text">
+			At Bloom & Grow, we are passionate about plants and bringing the beauty of
+			nature into people's homes and workplaces. Our plant shop has been serving
+			the pontianaj community for 12 years, and we pride ourselves on our
+			extensive selection of high-quality plants and our commitment to excellent
+			customer service.
+		</p>
+	</div>
+	<iframe
+		class="about-video"
+		src="https://www.youtube.com/embed/wEYid_Fo_Uw?si=qzBsiyvX3kE9Z3XP"
+		title="YouTube video player"
+		frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+		referrerpolicy="strict-origin-when-cross-origin"
+		allowfullscreen></iframe>
+	<div class="about-main-btns">
+		<div class="header-section-btns">
+			<a href="#">Contact us</a>
+			<a href="#">Learn More</a>
+		</div>
+	</div>
+</section>
+<section class="about-team-section wrapper">
+	<div class="about-team-info">
+		<h2 class="section-title">Who We Are: Bloom & Grow Team</h2>
+		<p class="text">
+			At Bloom & Grow, we have a dedicated team of plant enthusiasts who are
+			passionate about providing the best possible products and services to our
+			customers. Our team members come from diverse backgrounds and bring a
+			wealth of knowledge and experience to the table.
+		</p>
+	</div>
+	<div class="about-team-members">
+		<div class="member">
+			<img src="{% static 'assets/images/team-1.png' %}" alt="" />
+			<div class="member-info">
+				<h4 class="member-name">Jane Doe</h4>
+				<p class="text">Plant Specialist</p>
+			</div>
+		</div>
+		<div class="member">
+			<img src="{% static 'assets/images/team-2.png' %}" alt="" />
+			<div class="member-info">
+				<h4 class="member-name">John Smith</h4>
+				<p class="text">Customer Service Manager</p>
+			</div>
+		</div>
+		<div class="member">
+			<img src="{% static 'assets/images/team-3.png' %}" alt="" />
+			<div class="member-info">
+				<h4 class="member-name">Michael Chen</h4>
+				<p class="text">Operations Manager</p>
+			</div>
+		</div>
+	</div>
+	<a class="see-team-btn" href="{% url 'our_team' %}">See All Our Team</a>
+</section>
+<section class="what-customers-saying-section wrapper">
+	<h2 class="section-title">What our customers are saying</h2>
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="what-customers-saying-cont">
+					<div class="video">
+						<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+						<button class="playe-btn">
+							<iconify-icon icon="solar:play-bold"></iconify-icon>
+						</button>
+					</div>
+					<div class="what-customers-saying_info">
+						<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+						<div class="info">
+							<h3>
+								I love my new plant from Bloom & Grow! The staff was so helpful
+								in helping me choose the perfect plant for my home.
+							</h3>
+							<div class="user">
+								<img
+									src="{% static '/assets/icons/client-profile-photo-icon.svg' %}"
+									alt="" />
+								<p>John Doni</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="what-customers-saying-cont right">
+					<div class="what-customers-saying_info">
+						<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+						<div class="info">
+							<h3>
+								I love my new plant from Bloom & Grow! The staff was so helpful
+								in helping me choose the perfect plant for my home.
+							</h3>
+							<div class="user">
+								<img
+									src="{% static '/assets/icons/client-profile-photo-icon.svg' %}"
+									alt="" />
+								<p>John Doni</p>
+							</div>
+						</div>
+					</div>
+					<div class="video">
+						<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+						<button class="playe-btn">
+							<iconify-icon icon="solar:play-bold"></iconify-icon>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="what-customers-saying-cont">
+					<div class="video">
+						<img src="./assets/images/video-img.png" alt="" />
+						<button class="playe-btn">
+							<iconify-icon icon="solar:play-bold"></iconify-icon>
+						</button>
+					</div>
+					<div class="what-customers-saying_info">
+						<img src="./assets/images/green-bg.png" alt="" />
+						<div class="info">
+							<h3>
+								I love my new plant from Bloom & Grow! The staff was so helpful
+								in helping me choose the perfect plant for my home.
+							</h3>
+							<div class="user">
+								<img
+									src="./assets/icons/client-profile-photo-icon.svg"
+									alt="" />
+								<p>John Doni</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</section>
+{%endblock main%}

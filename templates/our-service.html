@@ -1,0 +1,55 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Our blog{% endblock title %} 
+{% block main %}
+<section class="wrapper head-section">
+    <div class="head-section-info">
+        <h1>Our Service</h1>
+        <nav class="breadcrumbs">
+            <a class="breadcrumb active" href="{% url 'home' %}">Home /</a>
+            <a class="breadcrumb" href="">Our Service</a>
+        </nav>
+    </div>
+</section>
+<section class="our-services-section wrapper">
+    <div class="our-services-section-header">
+        <h2 class="section-title">Our Services</h2>
+        <p class="text">At Bloom & Grow, we offer a wide range of plant-related services to cater to your needs. From plant rentals to custom plant designs, we have everything you need to create a green and inviting space. Our team of experts has years of experience in the industry and is dedicated to providing high-quality services that meet your specific requirements.</p>
+    </div>
+    <div class="all-our-services">
+        {% for service in services %}
+        <div class="{% if forloop.counter == 2 %}green{% else %}cream{% endif %} service-card">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="41"
+                class="leaves-icon"
+                viewBox="0 0 40 41"
+                fill="none">
+                <g clip-path="url(#clip0_111_2960)">
+                    <path
+                        d="M37.6554 0.905762C29.6583 0.905762 20 6.64795 20 13.7787C20 13.8204 20.0115 13.9393 20.0169 13.9811C20.0302 14.3859 20.309 14.7339 20.7014 14.8334C21.0911 14.9337 21.5058 14.7624 21.7099 14.4125C24.1007 10.334 27.6074 7.1975 32.4326 4.82264C32.8792 4.59892 33.4314 4.79775 33.6479 5.23633C33.7553 5.45477 33.7713 5.7015 33.6932 5.93145C33.615 6.16139 33.4526 6.34693 33.2351 6.45346C27.8126 9.12372 24.1694 12.7989 22.0919 17.6808C22.0581 17.7305 22.0154 17.7719 21.9913 17.8295C20.688 20.9723 20.0178 24.7018 20 28.9153C19.6792 28.0704 19.3005 27.2667 18.893 26.4829C19.6156 25.3744 20 24.1683 20 22.8695C20 15.7388 10.3417 9.99662 2.3446 9.99662C1.05205 9.99671 0 11.0487 0 12.3413C0 20.3384 5.74219 29.9967 12.8738 29.9967C14.6282 29.9967 16.2181 29.3102 17.615 27.9956C19.2082 31.3547 20 35.2993 20 39.9967C20 40.4992 20.4066 40.9058 20.9091 40.9058C21.4116 40.9058 21.8182 40.4992 21.8182 39.9967V29.0876C21.8182 25.5297 22.3289 22.3793 23.2819 19.6484C24.4545 20.4782 25.7415 20.9058 27.1271 20.9058C34.2578 20.9058 40 11.2476 40 3.25045C40 1.95781 38.948 0.905762 37.6554 0.905762Z"
+                        fill="{% if forloop.counter == 2 %}#ffffff{% else %}#809D79{% endif %}" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_111_2960">
+                        <rect
+                            width="40"
+                            height="40"
+                            fill="white"
+                            transform="translate(0 0.905762)" />
+                    </clipPath>
+                </defs>
+            </svg>
+            <h4 class="card-title">{{service.title}}</h4>
+            <p class="text">
+                {{service.text|slice:":140"}}
+            </p>
+            <a class="read-more-btn" href="#"
+                >Read more <img src="{% static '/assets/icons/right-arrow-icon.svg' %}" alt=""
+            /></a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}

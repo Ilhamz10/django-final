@@ -1,0 +1,434 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="{% static '/css/global.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/footer.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/footer-section_card.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/index.css' %}" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<img
+				class="main-img"
+				src="{% static '/assets/images/main-image.png' %}"
+				alt="Main img" />
+			<nav class="nav wrapper">
+				<div class="logo">
+					<img src="{% static '/assets/images/Logo.png' %}" alt="Logo" />
+				</div>
+				<ul class="nav-list">
+					<li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">About us</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'our_service' %}">Service</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'our_blog' %}">Blog</a></li>
+					<li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Page</a></li>
+				</ul>
+				<a class="contact-btn" href="#">Contact us</a>
+			</nav>
+			<section class="header-section">
+				<div class="wrapper">
+					<div class="header-section-info_cont">
+						<div class="header-section-info">
+							<h1>Transform Your Space with Plants</h1>
+							<p>
+								Create a peaceful and inviting atmosphere in your home or office
+								with our wide range of indoor plants. From lush tropical foliage
+								to low-maintenance succulents, we have everything you need to
+								enhance your space and bring a touch of green to your life.
+							</p>
+						</div>
+						<div class="header-section-btns">
+							<a href="#">Contact us</a>
+							<a href="#">Learn More</a>
+						</div>
+					</div>
+
+					<div class="header-section-subinfo_cont">
+						<div class="comment-block">
+							<img
+								class="comment-stars"
+								src="{% static '/assets/icons/starts.svg' %}"
+								alt="Stars" />
+							<div class="comment-body">
+								<h4 class="comment-title">I highly recommend Bloom & Grow</h4>
+								<p class="comment">
+									I love my new plant from Bloom & Grow! The staff was so
+									helpful in helping me choose the perfect plant for my home.
+								</p>
+							</div>
+							<div class="comment-footer">
+								<img
+									class="comment-profile-icon"
+									src="{% static '/assets/icons/client-profile-photo-icon.svg' %}"
+									alt="Profile icon" />
+								<p class="client-name">Bobby John</p>
+							</div>
+						</div>
+						<div class="product-mini_card">
+							<img src="{% static '/assets/images/plant-image.png' %}" alt="Plant img" />
+							<div class="product-mini_card-info">
+								<h4 class="product-title">Fresh Basil Plant</h4>
+								<p class="product-price">$12</p>
+								<a class="product-btn" href="#">See Detail</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
+		<main>
+			<section class="our-mission-section">
+				<div class="wrapper">
+					<div class="our-mission-cont">
+						<div class="our-mission-img">
+							<img src="{% static '/assets/images/cactus-img.png' %}" alt="" />
+						</div>
+						<div class="our-mission-info">
+							<div class="our-mission-text">
+								<h2 class="section-title">
+									Our Mission to Provide High-Quality Plants
+								</h2>
+								<p class="text">
+									At Bloom & Grow, we are passionate about plants and bringing
+									the beauty of nature into people's homes and workplaces. Our
+									plant shop has been serving the pontianaj community for 12
+									years, and we pride ourselves on our extensive selection of
+									high-quality plants and our commitment to excellent customer
+									service.
+								</p>
+							</div>
+							<div class="video">
+								<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+							</div>
+							<button class="about-us-btn btn">About us</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-service-section wrapper">
+				<div class="our-service-header">
+					<h2 class="section-title">Our Service</h2>
+					<p class="text">
+						At [Your Plant Shop Name], we offer a range of services to help you
+						bring the beauty of plants into your home or office. Our services
+						include plant care tips and consultations, plant delivery, and plant
+						installation.
+					</p>
+				</div>
+				<div class="our-service-cards">
+					{% for service in services %}
+					<div class="{% if forloop.counter == 2 %}green{% else %}cream{% endif %} service-card">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="41"
+							class="leaves-icon"
+							viewBox="0 0 40 41"
+							fill="none">
+							<g clip-path="url(#clip0_111_2960)">
+								<path
+									d="M37.6554 0.905762C29.6583 0.905762 20 6.64795 20 13.7787C20 13.8204 20.0115 13.9393 20.0169 13.9811C20.0302 14.3859 20.309 14.7339 20.7014 14.8334C21.0911 14.9337 21.5058 14.7624 21.7099 14.4125C24.1007 10.334 27.6074 7.1975 32.4326 4.82264C32.8792 4.59892 33.4314 4.79775 33.6479 5.23633C33.7553 5.45477 33.7713 5.7015 33.6932 5.93145C33.615 6.16139 33.4526 6.34693 33.2351 6.45346C27.8126 9.12372 24.1694 12.7989 22.0919 17.6808C22.0581 17.7305 22.0154 17.7719 21.9913 17.8295C20.688 20.9723 20.0178 24.7018 20 28.9153C19.6792 28.0704 19.3005 27.2667 18.893 26.4829C19.6156 25.3744 20 24.1683 20 22.8695C20 15.7388 10.3417 9.99662 2.3446 9.99662C1.05205 9.99671 0 11.0487 0 12.3413C0 20.3384 5.74219 29.9967 12.8738 29.9967C14.6282 29.9967 16.2181 29.3102 17.615 27.9956C19.2082 31.3547 20 35.2993 20 39.9967C20 40.4992 20.4066 40.9058 20.9091 40.9058C21.4116 40.9058 21.8182 40.4992 21.8182 39.9967V29.0876C21.8182 25.5297 22.3289 22.3793 23.2819 19.6484C24.4545 20.4782 25.7415 20.9058 27.1271 20.9058C34.2578 20.9058 40 11.2476 40 3.25045C40 1.95781 38.948 0.905762 37.6554 0.905762Z"
+									fill="{% if forloop.counter == 2 %}#ffffff{% else %}#809D79{% endif %}" />
+							</g>
+							<defs>
+								<clipPath id="clip0_111_2960">
+									<rect
+										width="40"
+										height="40"
+										fill="white"
+										transform="translate(0 0.905762)" />
+								</clipPath>
+							</defs>
+						</svg>
+						<h4 class="card-title">{{service.title}}</h4>
+						<p class="text">
+							{{service.text|slice:":140"}}
+						</p>
+						<a class="read-more-btn" href="#"
+							>Read more <img src="{% static '/assets/icons/right-arrow-icon.svg' %}" alt=""
+						/></a>
+					</div>
+					{% endfor %}
+				</div>
+				<a href="#" class="service-btn btn">See All Service</a>
+			</section>
+			<section class="why-choose-section wrapper">
+				<div class="why-choose-info">
+					<h2 class="section-title">
+						Why Choose Bloom & Grow as Your Plants Partner?
+					</h2>
+					<div class="why-choose-info-content-grid">
+						<div class="why-choose-info-content">
+							<div class="number">1</div>
+							<div class="why-choose-info-content-text">
+								<h3 class="why-choose-title">Expertise</h3>
+								<p class="text">
+									Our team of experienced plant enthusiasts is passionate about
+									all things green, and we're dedicated to helping you find the
+									perfect plants for your space.
+								</p>
+							</div>
+						</div>
+						<div class="why-choose-info-content">
+							<div class="number">2</div>
+							<div class="why-choose-info-content-text">
+								<h3 class="why-choose-title">Sustainability</h3>
+								<p class="text">
+									At Bloom & Grow, we're committed to promoting sustainable
+									plant practices and protecting our planet.
+								</p>
+							</div>
+						</div>
+						<div class="why-choose-info-content">
+							<div class="number">3</div>
+							<div class="why-choose-info-content-text">
+								<h3 class="why-choose-title">Community</h3>
+								<p class="text">
+									We believe that plants are more than just decorative objects –
+									they're a way to connect with nature and build a sense of
+									community.
+								</p>
+							</div>
+						</div>
+					</div>
+					<button class="btn learn-more-btn">Learn More</button>
+				</div>
+				<div class="why-choose-section-img-cont">
+					<img src="{% static '/assets/images/why-choose-section-img.png' %}" alt="" />
+					<img src="{% static '/assets/images/why-choose-section-img-2.png' %}" alt="" />
+				</div>
+			</section>
+			<section class="what-customers-saying-section wrapper">
+				<h2 class="section-title">What our customers are saying</h2>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="what-customers-saying-cont">
+								<div class="video">
+									<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+									<button class="playe-btn">
+										<iconify-icon icon="solar:play-bold"></iconify-icon>
+									</button>
+								</div>
+								<div class="what-customers-saying_info">
+									<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+									<div class="info">
+										<h3>
+											I love my new plant from Bloom & Grow! The staff was so
+											helpful in helping me choose the perfect plant for my
+											home.
+										</h3>
+										<div class="user">
+											<img
+												src="{% static '/assets/icons/client-profile-photo-icon.svg' %}"
+												alt="" />
+											<p>John Doni</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="what-customers-saying-cont right">
+								<div class="what-customers-saying_info">
+									<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+									<div class="info">
+										<h3>
+											I love my new plant from Bloom & Grow! The staff was so
+											helpful in helping me choose the perfect plant for my
+											home.
+										</h3>
+										<div class="user">
+											<img
+												src="{% static '/assets/icons/client-profile-photo-icon.svg' %}"
+												alt="" />
+											<p>John Doni</p>
+										</div>
+									</div>
+								</div>
+								<div class="video">
+									<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+									<button class="playe-btn">
+										<iconify-icon icon="solar:play-bold"></iconify-icon>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="what-customers-saying-cont">
+								<div class="video">
+									<img src="./assets/images/video-img.png" alt="" />
+									<button class="playe-btn">
+										<iconify-icon icon="solar:play-bold"></iconify-icon>
+									</button>
+								</div>
+								<div class="what-customers-saying_info">
+									<img src="./assets/images/green-bg.png" alt="" />
+									<div class="info">
+										<h3>
+											I love my new plant from Bloom & Grow! The staff was so
+											helpful in helping me choose the perfect plant for my
+											home.
+										</h3>
+										<div class="user">
+											<img
+												src="./assets/icons/client-profile-photo-icon.svg"
+												alt="" />
+											<p>John Doni</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<section class="explore-blog-section wrapper">
+				<div class="explore-blog-section-info">
+					<h2 class="section-title">Explore Our Blog for Green Inspiration</h2>
+					<p class="text">
+						Our blog is filled with informative and inspiring content on all
+						things green. From plant care tips and advice to the latest trends
+						in gardening and design, our experts share their knowledge to help
+						you bring your indoor and outdoor spaces to life.
+					</p>
+				</div>
+				<div class="explore-blog-allblogs">
+					{% for blog in blogs %}
+					<div class="blog-card">
+						<img src="{% if blog.avatar %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}" alt="" />
+						<div class="blog-card-body">
+							<div class="blog-card-body_info">
+								<p class="blog-card-label">{{blog.tag}}</p>
+								<h3 class="blog-card-title">
+									{{blog.title}}
+								</h3>
+							</div>
+							<a class="blog-card-readmore" href="{% url 'detail_blog' blog.id %}"
+								>Read More<iconify-icon icon="maki:arrow"></iconify-icon
+							></a>
+							<div class="blog-card-footer">
+								<img
+									class="blog-card-avatar_img"
+									src="{% if blog.avatar %}{{ blog.avatar.url }}{% else %}{% static 'assets/images/explore-our-blog-avatar-img.png' %}{% endif %}"
+									alt="" />
+								<div class="blog-card-footer_info">
+									<p class="blog-card-user">By {{blog.user_name}}</p>
+									<p class="blog-card-date">{{blog.date}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</section>
+			<section class="footer-section wrapper">
+				<div class="footer-section-card">
+					<div class="footer-section-img_cont">
+						<img src="{% static '/assets/images/footer-section_main.png' %}" alt="" />
+					</div>
+					<div class="footer-section-card_info">
+						<h2>
+							Creating Beautiful Spaces with the Help of Bloom & Grow's Plant
+							Experts
+						</h2>
+						<p>
+							At Bloom & Grow, we know that selecting the right plants for your
+							space can be a daunting task. That's why we offer personalized
+							plant consultation services to help you make informed decisions
+							about your indoor and outdoor greenery.
+						</p>
+						<a class="contact-btn footer-section-btn" href="#">Contact us</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="wrapper footer">
+			<div class="footer-info">
+				<img class="footer-logo" src="./assets/images/Logo.png" alt="" />
+				<p class="text">
+					At Bloom & Grow, we are passionate about plants and bringing the
+					beauty of nature into people's homes and workplaces.
+				</p>
+				<div class="footer-social-links">
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="mdi:twitter"></iconify-icon
+					></a>
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="ri:facebook-fill"></iconify-icon
+					></a>
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="mdi:instagram"></iconify-icon
+					></a>
+				</div>
+			</div>
+			<nav class="footer-nav">
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Quicklinks</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Shop</a></li>
+						<li><a href="#">Service</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">My Cart</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Support</h3>
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Get in touch</h3>
+					<ul>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="bi:geo-alt-fill"></iconify-icon>
+							</div>
+							<span>123 Anywhere Street, Any City, 12345 ST, Indonesia</span>
+						</li>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="lets-icons:message-fill"></iconify-icon>
+							</div>
+							<span>example@gmai.com</span>
+						</li>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="solar:phone-bold"></iconify-icon>
+							</div>
+							<span>+123 456 7890</span>
+						</li>
+					</ul>
+				</div>
+				<ul class="footer-nav_links">
+					<li class="footer-nav-title">Newsletter</li>
+					<form class="footer-search_form">
+						<input type="text" />
+						<button class="btn footer-search_btn">Submit</button>
+					</form>
+					<p class="copyright">
+						© Copyright 2023, All Rights Reserved by Bloom & Grow
+					</p>
+				</ul>
+			</nav>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+		<script src="{% static '/js/swiper-config.js' %}"></script>
+	</body>
+</html>

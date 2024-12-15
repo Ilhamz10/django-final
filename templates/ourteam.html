@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Our blog{% endblock title %}
+{% block main %}
+<section class="wrapper head-section">
+	<div class="head-section-info">
+		<h1>Our Team</h1>
+		<nav class="breadcrumbs">
+			<a class="breadcrumb active" href="{% url 'home' %}">Home /</a>
+			<a class="breadcrumb" href="#">Our Team</a>
+		</nav>
+	</div>
+</section>
+<section class="all-team-members-section wrapper">
+    <div class="all-team-members-section-text">
+        <h2 class="section-title">Meet Our Happy People!</h2>
+        <p class="text">At Bloom & Grow, we have a dedicated team of plant enthusiasts who are passionate about providing the best possible products and services to our customers. Our team members come from diverse backgrounds and bring a wealth of knowledge and experience to the table.</p>
+    </div>
+    <div class="all-team-members">
+        <div class="team-member">
+            <div class="team-member-info">
+                <img src="{% static 'assets/images/team-1.png' %}" alt="">
+                <h4 class="member-name">Jane Doe</h4>
+                <p class="text">Plant Specialist</p>
+            </div>
+            <div class="team-member-text">
+                <img class="quote-icon" src="{% static 'assets/icons/quote.svg' %}" alt="">
+                <p>I love working at Bloom & Grow because I get to share my passion for plants with customers every day. It's so rewarding to see their faces light up when they find the perfect plant for their home or office.</p>
+            </div>
+        </div>
+        <div class="team-member reverse">
+            <div class="team-member-info">
+                <img src="{% static 'assets/images/team-2.png' %}" alt="">
+                <h4 class="member-name">Jane Doe</h4>
+                <p class="text">Plant Specialist</p>
+            </div>
+            <div class="team-member-text">
+                <img class="quote-icon" src="{% static 'assets/icons/quote.svg' %}" alt="">
+                <p>I love working at Bloom & Grow because I get to share my passion for plants with customers every day. It's so rewarding to see their faces light up when they find the perfect plant for their home or office.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-member-info">
+                <img src="{% static 'assets/images/team-3.png' %}" alt="">
+                <h4 class="member-name">Jane Doe</h4>
+                <p class="text">Plant Specialist</p>
+            </div>
+            <div class="team-member-text">
+                <img class="quote-icon" src="{% static 'assets/icons/quote.svg' %}" alt="">
+                <p>I love working at Bloom & Grow because I get to share my passion for plants with customers every day. It's so rewarding to see their faces light up when they find the perfect plant for their home or office.</p>
+            </div>
+        </div>
+        <div class="team-member reverse">
+            <div class="team-member-info">
+                <img src="{% static 'assets/images/team-4.png' %}" alt="">
+                <h4 class="member-name">Jane Doe</h4>
+                <p class="text">Plant Specialist</p>
+            </div>
+            <div class="team-member-text">
+                <img class="quote-icon" src="{% static 'assets/icons/quote.svg' %}" alt="">
+                <p>I love working at Bloom & Grow because I get to share my passion for plants with customers every day. It's so rewarding to see their faces light up when they find the perfect plant for their home or office.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="team-member-info">
+                <img src="{% static 'assets/images/team-5.png' %}" alt="">
+                <h4 class="member-name">Jane Doe</h4>
+                <p class="text">Plant Specialist</p>
+            </div>
+            <div class="team-member-text">
+                <img class="quote-icon" src="{% static 'assets/icons/quote.svg' %}" alt="">
+                <p>I love working at Bloom & Grow because I get to share my passion for plants with customers every day. It's so rewarding to see their faces light up when they find the perfect plant for their home or office.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{%endblock main%}

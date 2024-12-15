@@ -1,0 +1,76 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Our blog{% endblock title %} 
+{% block main %}
+	<section class="wrapper head-section">
+		<div class="head-section-info">
+			<h1>Our Blog</h1>
+			<nav class="breadcrumbs">
+				<a class="breadcrumb active" href="{% url 'home' %}">Home /</a>
+				<a class="breadcrumb" href="">Our Blog</a>
+			</nav>
+		</div>
+	</section>
+	<section class="wrapper bloom-grow-blog-section">
+		<div>
+			<h2 class="section-title">Bloom & Grow Blog</h2>
+			<div class="blog-filters">
+				<div class="blog-filter active">All</div>
+				<div class="blog-filter">Plant Care</div>
+				<div class="blog-filter">Green Living</div>
+				<div class="blog-filter">Design & Decor</div>
+			</div>
+		</div>
+		<div class="big-blog">
+			<img src="{% static 'assets/images/explore-our-blog-img1.png' %}" alt="" />
+			<div class="big-blog-body">
+				<p class="blog-card-label">{{blogs.0.tag}}</p>
+				<div>
+					<h3 class="blog-card-title">{{blogs.0.title}}</h3>
+					<p class="text">{{blogs.0.text}}...</p>
+				</div>
+				<a class="blog-card-readmore" href="#"
+					>Read More<iconify-icon icon="maki:arrow"></iconify-icon
+				></a>
+				<div class="blog-card-footer">
+					<img
+						class="blog-card-avatar_img"
+						src="{% static 'assets/images/explore-our-blog-avatar-img.png' %}"
+						alt="" />
+					<div class="blog-card-footer_info">
+						<p class="blog-card-user">By {{blogs.0.user_name}}</p>
+						<p class="blog-card-date">{{blogs.0.date}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="all-blogs">
+			{% for blog in blogs %}
+			<div class="blog-card">
+				<img src="{% if blog.image %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}" alt="" />
+				<div class="blog-card-body">
+					<div class="blog-card-body_info">
+						<p class="blog-card-label">{{blog.tag}}</p>
+						<h3 class="blog-card-title">
+							{{blog.title}}
+						</h3>
+					</div>
+					<a class="blog-card-readmore" href="{% url 'detail_blog' blog.id %}"
+						>Read More<iconify-icon icon="maki:arrow"></iconify-icon
+					></a>
+					<div class="blog-card-footer">
+						<img
+						class="blog-card-avatar_img"
+						src="{% static 'assets/images/explore-our-blog-avatar-img.png' %}"
+						alt="" />
+						<div class="blog-card-footer_info">
+							<p class="blog-card-user">By {{blog.username}}</p>
+							<p class="blog-card-date">{{blog.date}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			{%endfor%}
+		</div>
+	</section>
+{% endblock main %}

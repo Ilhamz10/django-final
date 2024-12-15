@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Our blog{% endblock title %}
+{% block main %}
+
+    <div class="content">
+        <p class="basliq">FAQ<br><span id="alt"><span class="home">Home/</span><span class="ourteam">FAQ</span></span></p>
+    </div>
+    <hr class="custom-hr">
+    <main>
+        <section class="faq">
+            <h1>Frequently Asked Questions (FAQ)</h1>
+            <p class="info-text">We want to make sure you have all the information you need to make informed decisions about your plant purchases and care. Here are some common questions we receive from our customers:</p>
+
+            <button class="faq-button orange-btn">General Questions</button>
+            <button class="faq-button grey-btn no-border">Product Questions</button>
+            <button class="faq-button grey-btn no-border">Payment Questions</button>
+
+            <div class="highlight">
+                <h3>What payment methods do you accept?</h3>
+                <p>Our plant rental service includes a selection of high-quality, low-maintenance plants that are perfect for any indoor environment. From small desk plants to large statement pieces, we have a range of options to suit your needs. Our plants are sourced from local growers and are carefully chosen for their health and beauty.</p>
+            </div>
+
+            <div class="question-list">
+                <div class="question-item">
+                    How often should I water my plants?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    Do you offer international shipping?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    How do I care for my new plant?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    What size planter should I choose for my plant?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    What payment methods do you accept?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    Do you offer payment plans or financing options?
+                    <span class="icon">+</span>
+                </div>
+                <div class="question-item">
+                    How much light do my plants need?
+                    <span class="icon">+</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+{% endblock main %}

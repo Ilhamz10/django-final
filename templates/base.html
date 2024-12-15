@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}{% endblock title %}</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+			integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="{% static '/css/global.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/footer.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/footer-section_card.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/header.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/detail-service.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/our-blog.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/faq.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/ourteam.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/tac.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/detailblog.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/about.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/our-service.css' %}" />
+	</head>
+	<body>
+		<header class="header">
+			<nav class="nav wrapper">
+				<div class="logo">
+					<img src="{% static '/assets/images/Logo.png' %}" alt="Logo" />
+				</div>
+				<ul class="nav-list">
+					<li class="nav-item"><a class="nav-link {% if request.path == '' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+					<li class="nav-item"><a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="{% url 'about_us' %}">About us</a></li>
+					<li class="nav-item"><a class="nav-link {% if request.path == '/our-service/' %}active{% endif %}" href="{% url 'our_service' %}">Service</a></li>
+					<li class="nav-item"><a class="nav-link {% if request.path == '/our-blog/' %}active{% endif %}" href="{% url 'our_blog' %}">Blog</a></li>
+					<li class="nav-item"><a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="{% url 'home' %}">Page</a></li>
+				</ul>
+				<a class="contact-btn" href="#">Contact us</a>
+			</nav>
+		</header>
+		<main>
+			{% block main %}{% endblock main %}
+		</main>
+		<section class="footer-section wrapper">
+			<div class="footer-section-card">
+				<div class="footer-section-img_cont">
+					<img
+						src="{% static '/assets/images/footer-section_main.png' %}"
+						alt="" />
+				</div>
+				<div class="footer-section-card_info">
+					<h2>
+						Creating Beautiful Spaces with the Help of Bloom & Grow's Plant
+						Experts
+					</h2>
+					<p>
+						At Bloom & Grow, we know that selecting the right plants for your
+						space can be a daunting task. That's why we offer personalized plant
+						consultation services to help you make informed decisions about your
+						indoor and outdoor greenery.
+					</p>
+					<a class="contact-btn footer-section-btn" href="#">Contact us</a>
+				</div>
+			</div>
+		</section>
+		<footer class="wrapper footer">
+			<div class="footer-info">
+				<img class="footer-logo" src="./assets/images/Logo.png" alt="" />
+				<p class="text">
+					At Bloom & Grow, we are passionate about plants and bringing the
+					beauty of nature into people's homes and workplaces.
+				</p>
+				<div class="footer-social-links">
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="mdi:twitter"></iconify-icon
+					></a>
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="ri:facebook-fill"></iconify-icon
+					></a>
+					<a href="#" class="footer-social-link"
+						><iconify-icon icon="mdi:instagram"></iconify-icon
+					></a>
+				</div>
+			</div>
+			<nav class="footer-nav">
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Quicklinks</h3>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Shop</a></li>
+						<li><a href="#">Service</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">My Cart</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Support</h3>
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Contact us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="footer-nav_links">
+					<h3 class="footer-nav-title">Get in touch</h3>
+					<ul>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="bi:geo-alt-fill"></iconify-icon>
+							</div>
+							<span>123 Anywhere Street, Any City, 12345 ST, Indonesia</span>
+						</li>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="lets-icons:message-fill"></iconify-icon>
+							</div>
+							<span>example@gmai.com</span>
+						</li>
+						<li class="footer-social_text">
+							<div class="footer-nav_icon">
+								<iconify-icon icon="solar:phone-bold"></iconify-icon>
+							</div>
+							<span>+123 456 7890</span>
+						</li>
+					</ul>
+				</div>
+				<ul class="footer-nav_links">
+					<li class="footer-nav-title">Newsletter</li>
+					<form class="footer-search_form">
+						<input type="text" />
+						<button class="btn footer-search_btn">Submit</button>
+					</form>
+					<p class="copyright">
+						© Copyright 2023, All Rights Reserved by Bloom & Grow
+					</p>
+				</ul>
+			</nav>
+		</footer>
+		<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="{% static '/js/swiper-config.js' %}"></script>
+	</body>
+</html>

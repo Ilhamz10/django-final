@@ -1,0 +1,174 @@
+@import url(https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Urbanist', sans-serif;
+	color: var(--greyscale-black);
+}
+
+:root {
+	--main-orange: #f48148;
+	--main-green: #809d79;
+	--main-cream: #f9ecdd;
+	--alerts-success: #00c566;
+	--alerts-error: #ff4747;
+	--alerts-warning: #facc15;
+	--greyscale-black: #3d3d3d;
+	--greyscale-grey: #6f6e73;
+
+	/* Fonts */
+	--heading1: normal normal 400 70px/80px 'Urbanist', sans-serif;
+	--heading2: normal normal 400 64px/1.2 'Urbanist', sans-serif;
+	--heading3: normal normal 400 50px/1.2 'Urbanist', sans-serif;
+	--heading4: normal normal 400 40px/48px 'Urbanist', sans-serif;
+	--heading5: normal normal 600 24px/1.2em 'Urbanist', sans-serif;
+	--heading6: normal normal 500 24px/48px 'Urbanist', sans-serif;
+	--heading7: normal normal 600 20px/24px 'Urbanist', sans-serif;
+	--heading8: normal normal 400 16px/1.2 'Urbanist', sans-serif;
+	--heading9: normal normal 600 12px/1.2 'Urbanist', sans-serif;
+
+	--body1: normal normal 400 20px/32px 'Urbanist', sans-serif;
+	--body2: normal normal 400 14px/24px 'Urbanist', sans-serif;
+	--body3: normal normal 400 12px/24px 'Urbanist', sans-serif;
+	--body4: normal normal 400 10px / normal 'Urbanist', sans-serif;
+
+	--button1: normal normal 500 16px / normal 'Urbanist', sans-serif;
+	--button2: normal normal 400 14px / normal 'Urbanist', sans-serif;
+	--button3: normal normal 500 12px / normal 'Urbanist', sans-serif;
+}
+
+section {
+	padding: 75px 0;
+}
+
+.wrapper {
+	width: min(1200px, calc(100% - 32px));
+	margin-inline: auto;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	display: block;
+	width: max-content;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.section-title {
+	font: var(--heading3);
+}
+
+.text {
+	color: var(--greyscale-grey);
+	font: var(--body2);
+}
+
+.btn {
+	padding: 18px 42px;
+	border-radius: 99px;
+	border: 1px solid var(--greyscale-black);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+/* Blog card */
+.blog-card {
+	display: grid;
+	gap: 24px;
+}
+
+.blog-card-body {
+	display: grid;
+	gap: 12px;
+}
+
+.blog-card-body_info {
+	display: grid;
+	gap: 8px;
+}
+
+.blog-card-label {
+	font: var(--button2);
+	color: var(--main-green);
+	padding: 6px 12px;
+	border-radius: 8px;
+	background: rgba(184, 248, 173, 0.28);
+	width: max-content;
+}
+
+.blog-card-title {
+	font: var(--heading7);
+	color: var(--greyscale-black);
+}
+
+.blog-card-readmore {
+	color: var(--main-orange);
+	font: var(--button1);
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.blog-card-readmore iconify-icon {
+	font-size: 20px;
+	color: var(--main-orange);
+}
+
+.blog-card-footer {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.blog-card-avatar_img {
+	width: 32px;
+	height: 32px;
+	object-fit: cover;
+}
+.blog-card-footer_info {
+	display: grid;
+	gap: 4px;
+}
+
+.blog-card-user {
+	font: var(--button3);
+	color: var(--greyscale-black);
+}
+
+.blog-card-date {
+	font: var(--body4);
+	color: var(--greyscale-grey);
+}
+
+.contact-btn {
+	padding: 16px 28px;
+	border-radius: 99px;
+	background: var(--main-green);
+	color: #fff;
+	font: var(--button1);
+}
+
+

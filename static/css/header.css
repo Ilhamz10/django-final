@@ -1,0 +1,38 @@
+.header {
+	position: relative;
+	width: 100%;
+}
+
+.main-img {
+	position: absolute;
+	max-width: 720px;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 26px 0;
+	margin-bottom: 115px;
+}
+
+.nav-list {
+	display: flex;
+	align-items: center;
+	gap: 64px;
+}
+
+.nav-link {
+	font: var(--body2);
+}
+
+.nav-link.active {
+	font-weight: 700;
+}
+
+.logo img {
+	max-width: 192px;
+}

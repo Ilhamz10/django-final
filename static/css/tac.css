@@ -1,0 +1,35 @@
+.basliq {
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 0px;
+    color: rgba(61, 61, 61, 1);
+    font-family: 'Urbanist', sans-serif;
+}
+
+#alt {
+    font-size: 14px;
+    color: #999;
+    display: block;
+    margin-top: 20px;
+}
+.home {
+    color: rgba(244, 129, 72, 1);
+}
+
+.ourteam {
+    color: rgba(111, 110, 115, 1);
+}
+
+.custom-hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.11);
+    margin: 100px auto;
+    width: 80%;
+}
+
+.content {
+    text-align: center;
+}

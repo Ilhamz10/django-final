@@ -1,0 +1,79 @@
+{% extends "base.html" %} 
+{% load static %} 
+{% block title %}Our blog{% endblock title %}
+{% block main %}
+<section class="detail-blog-breadcrumbs-section wrapper">
+	<div class="detail-blog-breadcrumbs">
+		<a class="active" href="{% url 'home' %}">Home</a>
+		<a class="active" href="{% url 'our_blog' %}">/ Our Blog</a>
+		<a href=""
+			>/ The Benefits of Indoor Plants for Your Health and Well-Being</a
+		>
+	</div>
+</section>
+<section class="detail-blog-main-section wrapper">
+    <div class="blog-main-info-header">
+        <p class="blog-card-label">{{blog.tag}}</p>
+        <h3 class="blog-title">
+            {{blog.title}}
+        </h3>
+        <div class="blog-card-footer">
+            <img
+            class="blog-card-avatar_img"
+            src="{% if blog.avatar %}{{ blog.avatar.url }}{% else %}{% static 'assets/images/explore-our-blog-avatar-img.png' %}{% endif %}"
+            alt="" />
+            <div class="blog-card-footer_info">
+                <p class="blog-card-user">By {{blog.user_name}}</p>
+                <p class="blog-card-date">{{blog.date}}</p>
+            </div>
+        </div>
+    </div>
+    <img class="blog-img" src="{% if blog.avatar %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}" alt="">
+    <p class="blog-text">{{blog.text}}</p>
+    <div class="social-links-cont">
+        <p>Share</p>
+        <div class="social-links">
+            <img src="{% static 'assets/icons/discors-icon.svg' %}" alt="">
+            <img src="{% static 'assets/icons/twitter-icon.svg' %}" alt="">
+            <img src="{% static 'assets/icons/telegram-icon.svg' %}" alt="">
+            <img src="{% static 'assets/icons/linkedin-icon.svg' %}" alt="">
+        </div>
+    </div>
+</section>
+<section class="explore-blog-section wrapper">
+    <div class="explore-blog-section-info">
+        <h2 class="section-title">Relate Blog</h2>
+        <p class="text">
+            Our blog is filled with informative and inspiring content on all things green. From plant care tips and advice to the latest trends in gardening and design, our experts share their knowledge to help you bring your indoor and outdoor spaces to life.
+        </p>
+    </div>
+    <div class="explore-blog-allblogs">
+        {% for blog in blogs %}
+        <div class="blog-card">
+            <img src="{% if blog.avatar %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}" alt="" />
+            <div class="blog-card-body">
+                <div class="blog-card-body_info">
+                    <p class="blog-card-label">{{blog.tag}}</p>
+                    <h3 class="blog-card-title">
+                        {{blog.title}}
+                    </h3>
+                </div>
+                <a class="blog-card-readmore" href="{% url 'detail_blog' blog.id %}"
+                    >Read More<iconify-icon icon="maki:arrow"></iconify-icon
+                ></a>
+                <div class="blog-card-footer">
+                    <img
+                        class="blog-card-avatar_img"
+                        src="{% if blog.avatar %}{{ blog.avatar.url }}{% else %}{% static 'assets/images/explore-our-blog-avatar-img.png' %}{% endif %}"
+                        alt="" />
+                    <div class="blog-card-footer_info">
+                        <p class="blog-card-user">By {{blog.user_name}}</p>
+                        <p class="blog-card-date">{{blog.date}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}

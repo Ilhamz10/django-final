@@ -1,0 +1,44 @@
+.footer-section-card {
+	position: relative;
+	background: var(--main-cream);
+	display: grid;
+	grid-template-columns: minmax(370px, 1fr) minmax(0, 574px);
+	border-radius: 24px;
+}
+
+.footer-section-img_cont {
+	position: relative;
+}
+
+.footer-section-card img {
+	position: absolute;
+	max-width: 505px;
+	width: 100%;
+	bottom: 0;
+	left: -15px;
+}
+
+.footer-section-card_info {
+	grid-column: 2 / 3;
+	padding: 74px 70px 58px 0;
+}
+
+.footer-section-card_info h2 {
+	font: var(--heading4);
+	margin-bottom: 16px;
+}
+
+.footer-section-card_info p {
+	font: var(--body2);
+	margin-bottom: 24px;
+}
+
+.footer-section .footer-section-btn {
+	background: var(--main-orange);
+}
+
+@media (min-width: 991px) {
+	.footer-section {
+		margin-top: 100px;
+	}
+}
