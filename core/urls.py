@@ -30,7 +30,8 @@ urlpatterns = [
     path('detail-blog/<int:id>/', detail_blog, name='detail_blog'),
     path('about-us/', about_us, name='about_us'),
     path('', home_page, name='home'),
-    path('our-service/', our_service, name='our_service')
+    path('our-service/', our_service, name='our_service'),
+    path('contact-us/', contact_us, name='contact_us')
 ]
 
 if settings.DEBUG:

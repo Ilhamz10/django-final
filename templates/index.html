@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="{% static '/css/footer.css' %}" />
 		<link rel="stylesheet" href="{% static '/css/footer-section_card.css' %}" />
 		<link rel="stylesheet" href="{% static '/css/index.css' %}" />
-		<title>Document</title>
+		<title>Bloom&Grow</title>
 	</head>
 	<body>
 		<header class="header">
@@ -24,13 +24,25 @@
 					<img src="{% static '/assets/images/Logo.png' %}" alt="Logo" />
 				</div>
 				<ul class="nav-list">
-					<li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">About us</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'our_service' %}">Service</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'our_blog' %}">Blog</a></li>
-					<li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Page</a></li>
+					<li class="nav-item">
+						<a class="nav-link active" href="{% url 'home' %}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'about_us' %}">About us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'our_service' %}">Service</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'our_blog' %}">Blog</a>
+					</li>
+					{% comment %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'home' %}">Page</a>
+					</li>
+					{% endcomment %}
 				</ul>
-				<a class="contact-btn" href="#">Contact us</a>
+				<a class="contact-btn" href="{% url 'contact_us' %}">Contact us</a>
 			</nav>
 			<section class="header-section">
 				<div class="wrapper">
@@ -45,7 +57,7 @@
 							</p>
 						</div>
 						<div class="header-section-btns">
-							<a href="#">Contact us</a>
+							<a href="{% url 'contact_us' %}">Contact us</a>
 							<a href="#">Learn More</a>
 						</div>
 					</div>
@@ -72,7 +84,9 @@
 							</div>
 						</div>
 						<div class="product-mini_card">
-							<img src="{% static '/assets/images/plant-image.png' %}" alt="Plant img" />
+							<img
+								src="{% static '/assets/images/plant-image.png' %}"
+								alt="Plant img" />
 							<div class="product-mini_card-info">
 								<h4 class="product-title">Fresh Basil Plant</h4>
 								<p class="product-price">$12</p>
@@ -107,7 +121,9 @@
 							<div class="video">
 								<img src="{% static '/assets/images/video-img.png' %}" alt="" />
 							</div>
-							<button class="about-us-btn btn">About us</button>
+							<a href="{% url 'about_us' %}" class="about-us-btn btn"
+								>About us</a
+							>
 						</div>
 					</div>
 				</div>
@@ -124,7 +140,8 @@
 				</div>
 				<div class="our-service-cards">
 					{% for service in services %}
-					<div class="{% if forloop.counter == 2 %}green{% else %}cream{% endif %} service-card">
+					<div
+						class="{% if forloop.counter == 2 %}green{% else %}cream{% endif %} service-card">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="40"
@@ -148,16 +165,19 @@
 							</defs>
 						</svg>
 						<h4 class="card-title">{{service.title}}</h4>
-						<p class="text">
-							{{service.text|slice:":140"}}
-						</p>
-						<a class="read-more-btn" href="#"
-							>Read more <img src="{% static '/assets/icons/right-arrow-icon.svg' %}" alt=""
+						<p class="text">{{service.text|slice:":140"}}</p>
+						<a class="read-more-btn" href="{% url 'detail' %}"
+							>Read more
+							<img
+								src="{% static '/assets/icons/right-arrow-icon.svg' %}"
+								alt=""
 						/></a>
 					</div>
 					{% endfor %}
 				</div>
-				<a href="#" class="service-btn btn">See All Service</a>
+				<a href="{% url 'our_service' %}" class="service-btn btn"
+					>See All Service</a
+				>
 			</section>
 			<section class="why-choose-section wrapper">
 				<div class="why-choose-info">
@@ -201,8 +221,12 @@
 					<button class="btn learn-more-btn">Learn More</button>
 				</div>
 				<div class="why-choose-section-img-cont">
-					<img src="{% static '/assets/images/why-choose-section-img.png' %}" alt="" />
-					<img src="{% static '/assets/images/why-choose-section-img-2.png' %}" alt="" />
+					<img
+						src="{% static '/assets/images/why-choose-section-img.png' %}"
+						alt="" />
+					<img
+						src="{% static '/assets/images/why-choose-section-img-2.png' %}"
+						alt="" />
 				</div>
 			</section>
 			<section class="what-customers-saying-section wrapper">
@@ -212,13 +236,17 @@
 						<div class="swiper-slide">
 							<div class="what-customers-saying-cont">
 								<div class="video">
-									<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+									<img
+										src="{% static '/assets/images/video-img.png' %}"
+										alt="" />
 									<button class="playe-btn">
 										<iconify-icon icon="solar:play-bold"></iconify-icon>
 									</button>
 								</div>
 								<div class="what-customers-saying_info">
-									<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+									<img
+										src="{% static '/assets/images/green-bg.png' %}"
+										alt="" />
 									<div class="info">
 										<h3>
 											I love my new plant from Bloom & Grow! The staff was so
@@ -238,7 +266,9 @@
 						<div class="swiper-slide">
 							<div class="what-customers-saying-cont right">
 								<div class="what-customers-saying_info">
-									<img src="{% static '/assets/images/green-bg.png' %}" alt="" />
+									<img
+										src="{% static '/assets/images/green-bg.png' %}"
+										alt="" />
 									<div class="info">
 										<h3>
 											I love my new plant from Bloom & Grow! The staff was so
@@ -254,7 +284,9 @@
 									</div>
 								</div>
 								<div class="video">
-									<img src="{% static '/assets/images/video-img.png' %}" alt="" />
+									<img
+										src="{% static '/assets/images/video-img.png' %}"
+										alt="" />
 									<button class="playe-btn">
 										<iconify-icon icon="solar:play-bold"></iconify-icon>
 									</button>
@@ -304,15 +336,17 @@
 				<div class="explore-blog-allblogs">
 					{% for blog in blogs %}
 					<div class="blog-card">
-						<img src="{% if blog.avatar %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}" alt="" />
+						<img
+							src="{% if blog.avatar %}{{ blog.image.url }}{% else %}{% static 'assets/images/explore-our-blog-img1.png' %}{% endif %}"
+							alt="" />
 						<div class="blog-card-body">
 							<div class="blog-card-body_info">
 								<p class="blog-card-label">{{blog.tag}}</p>
-								<h3 class="blog-card-title">
-									{{blog.title}}
-								</h3>
+								<h3 class="blog-card-title">{{blog.title}}</h3>
 							</div>
-							<a class="blog-card-readmore" href="{% url 'detail_blog' blog.id %}"
+							<a
+								class="blog-card-readmore"
+								href="{% url 'detail_blog' blog.id %}"
 								>Read More<iconify-icon icon="maki:arrow"></iconify-icon
 							></a>
 							<div class="blog-card-footer">
@@ -333,7 +367,9 @@
 			<section class="footer-section wrapper">
 				<div class="footer-section-card">
 					<div class="footer-section-img_cont">
-						<img src="{% static '/assets/images/footer-section_main.png' %}" alt="" />
+						<img
+							src="{% static '/assets/images/footer-section_main.png' %}"
+							alt="" />
 					</div>
 					<div class="footer-section-card_info">
 						<h2>
@@ -346,7 +382,11 @@
 							plant consultation services to help you make informed decisions
 							about your indoor and outdoor greenery.
 						</p>
-						<a class="contact-btn footer-section-btn" href="#">Contact us</a>
+						<a
+							class="contact-btn footer-section-btn"
+							href="{% url 'contact_us' %}"
+							>Contact us</a
+						>
 					</div>
 				</div>
 			</section>
@@ -385,7 +425,7 @@
 					<h3 class="footer-nav-title">Support</h3>
 					<ul>
 						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="{% url 'contact_us' %}">Contact us</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li><a href="#">Terms & Conditions</a></li>
 						<li><a href="#">Privacy Policy</a></li>

@@ -1,6 +1,4 @@
-{% extends "base.html" %}
-{% load static %}
-{% block main %}
+{% extends "base.html" %} {% load static %} {% block main %}
 <main>
 	<section class="wrapper head-section">
 		<div class="head-section-info">
@@ -21,8 +19,7 @@
 				<iconify-icon icon="ep:arrow-up-bold"></iconify-icon
 			></a>
 			<a class="aside-nav_link" href=""
-				>Plant Maintenance
-				<iconify-icon icon="ep:arrow-up-bold"></iconify-icon
+				>Plant Maintenance <iconify-icon icon="ep:arrow-up-bold"></iconify-icon
 			></a>
 			<a class="aside-nav_link" href=""
 				>Green Wall Installation
@@ -32,8 +29,7 @@
 				>Plant Delivery <iconify-icon icon="ep:arrow-up-bold"></iconify-icon
 			></a>
 			<a class="aside-nav_link" href=""
-				>Plant Consultation
-				<iconify-icon icon="ep:arrow-up-bold"></iconify-icon
+				>Plant Consultation <iconify-icon icon="ep:arrow-up-bold"></iconify-icon
 			></a>
 		</aside>
 		<div class="main-cont">
@@ -41,49 +37,68 @@
 			<img src="{% static '/assets/images/detail-service-img.jpeg' %}" alt="" />
 			<div class="detail-text-cont">
 				<p class="text">
-					Welcome to our plant rental service! We offer a wide variety of
-					indoor plants to help bring life and vibrancy to your home or
-					office space. Our rental service makes it easy for you to enjoy
-					the benefits of plants without the long-term commitment of
-					purchasing them.
+					Welcome to our plant rental service! We offer a wide variety of indoor
+					plants to help bring life and vibrancy to your home or office space.
+					Our rental service makes it easy for you to enjoy the benefits of
+					plants without the long-term commitment of purchasing them.
 				</p>
 				<p class="text">
 					Our plant rental service includes a selection of high-quality,
-					low-maintenance plants that are perfect for any indoor
-					environment. From small desk plants to large statement pieces, we
-					have a range of options to suit your needs. Our plants are sourced
-					from local growers and are carefully chosen for their health and
-					beauty.
+					low-maintenance plants that are perfect for any indoor environment.
+					From small desk plants to large statement pieces, we have a range of
+					options to suit your needs. Our plants are sourced from local growers
+					and are carefully chosen for their health and beauty.
 				</p>
 				<p class="text">
 					We offer flexible rental terms to fit your schedule and budget.
-					Whether you need plants for a day, a week, or several months, we
-					can create a rental plan that works for you. Our team will work
-					with you to choose the best plants for your space and provide
-					maintenance and care instructions to ensure they thrive.
+					Whether you need plants for a day, a week, or several months, we can
+					create a rental plan that works for you. Our team will work with you
+					to choose the best plants for your space and provide maintenance and
+					care instructions to ensure they thrive.
 				</p>
 				<p class="text">
-					Our rental service includes delivery, setup, and pickup, so you
-					don't have to worry about a thing. We take care of all the details
-					so you can enjoy your plants without any hassle. Plus, our rental
-					service is environmentally friendly - when your rental period is
-					over, we'll pick up the plants and make sure they're reused or
-					recycled.
+					Our rental service includes delivery, setup, and pickup, so you don't
+					have to worry about a thing. We take care of all the details so you
+					can enjoy your plants without any hassle. Plus, our rental service is
+					environmentally friendly - when your rental period is over, we'll pick
+					up the plants and make sure they're reused or recycled.
 				</p>
 				<p class="text">
-					If you're interested in renting plants for your home or office,
-					please contact us to learn more. We'll be happy to answer any
-					questions you have and create a rental plan that's tailored to
-					your needs.
+					If you're interested in renting plants for your home or office, please
+					contact us to learn more. We'll be happy to answer any questions you
+					have and create a rental plan that's tailored to your needs.
 				</p>
 			</div>
-			<form>
+			<div style="height: 1px; border-top: 1px solid #0000001a"></div>
+			<form class="contact-us-form">
 				<h2 class="section-title">Our Contact Details</h2>
 				<p class="text">
-					We'd love to hear from you! Please fill out the form below and
-					we'll get back to you as soon as possible.
+					We'd love to hear from you! Please fill out the form below and we'll
+					get back to you as soon as possible.
 				</p>
-				
+				<div class="contact-us-form-inputs">
+					<div class="contact-us-form-input">
+						<label for="">First Name</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Last Name</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Email Address*</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Service</label>
+						<input type="text" />
+					</div>
+				</div>
+				<div class="contact-us-form-input">
+					<label for="">Comments / Questions</label>
+					<textarea name="" id=""></textarea>
+				</div>
+				<button class="btn bg-orange">Send Message</button>
 			</form>
 		</div>
 	</section>

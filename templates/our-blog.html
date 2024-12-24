@@ -29,7 +29,7 @@
 					<h3 class="blog-card-title">{{blogs.0.title}}</h3>
 					<p class="text">{{blogs.0.text}}...</p>
 				</div>
-				<a class="blog-card-readmore" href="#"
+				<a class="blog-card-readmore" href="{% url 'detail_blog' blogs.0.id %}"
 					>Read More<iconify-icon icon="maki:arrow"></iconify-icon
 				></a>
 				<div class="blog-card-footer">

@@ -48,3 +48,6 @@ def detail_blog(req, id):
 
 def about_us(req):
     return render(req, 'about.html')
+
+def contact_us(req):
+    return render(req, 'contact.html')

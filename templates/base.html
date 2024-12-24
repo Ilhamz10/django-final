@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="{% static '/css/detailblog.css' %}" />
 		<link rel="stylesheet" href="{% static '/css/about.css' %}" />
 		<link rel="stylesheet" href="{% static '/css/our-service.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/contact-us.css' %}" />
 	</head>
 	<body>
 		<header class="header">
@@ -38,9 +39,9 @@
 					<li class="nav-item"><a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="{% url 'about_us' %}">About us</a></li>
 					<li class="nav-item"><a class="nav-link {% if request.path == '/our-service/' %}active{% endif %}" href="{% url 'our_service' %}">Service</a></li>
 					<li class="nav-item"><a class="nav-link {% if request.path == '/our-blog/' %}active{% endif %}" href="{% url 'our_blog' %}">Blog</a></li>
-					<li class="nav-item"><a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="{% url 'home' %}">Page</a></li>
+					{% comment %} <li class="nav-item"><a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="{% url 'home' %}">Page</a></li> {% endcomment %}
 				</ul>
-				<a class="contact-btn" href="#">Contact us</a>
+				<a class="contact-btn" href="{% url 'contact_us' %}">Contact us</a>
 			</nav>
 		</header>
 		<main>
@@ -64,7 +65,7 @@
 						consultation services to help you make informed decisions about your
 						indoor and outdoor greenery.
 					</p>
-					<a class="contact-btn footer-section-btn" href="#">Contact us</a>
+					<a class="contact-btn footer-section-btn" href="{% url 'contact_us' %}">Contact us</a>
 				</div>
 			</div>
 		</section>
@@ -91,21 +92,21 @@
 				<div class="footer-nav_links">
 					<h3 class="footer-nav-title">Quicklinks</h3>
 					<ul>
-						<li><a href="#">Home</a></li>
+						<li><a href="{% url 'home' %}">Home</a></li>
 						<li><a href="#">Shop</a></li>
-						<li><a href="#">Service</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="{% url 'our_service' %}">Service</a></li>
+						<li><a href="{% url 'our_blog' %}">Blog</a></li>
 						<li><a href="#">My Cart</a></li>
 					</ul>
 				</div>
 				<div class="footer-nav_links">
 					<h3 class="footer-nav-title">Support</h3>
 					<ul>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Contact us</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Terms & Conditions</a></li>
-						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="{% url 'about_us' %}">About Us</a></li>
+						<li><a href="{% url 'contact_us' %}">Contact us</a></li>
+						<li><a href="{% url 'faq' %}">FAQ</a></li>
+						<li><a href="{% url 'home' %}">Terms & Conditions</a></li>
+						<li><a href="{% url 'home' %}">Privacy Policy</a></li>
 					</ul>
 				</div>
 				<div class="footer-nav_links">

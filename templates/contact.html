@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% load static %} {% block main %}
+<main>
+	<section class="wrapper head-section">
+		<div class="head-section-info">
+			<h1>Contact Us</h1>
+			<nav class="breadcrumbs">
+				<a class="breadcrumb active" href="#">Home /</a>
+				<a class="breadcrumb" href="#">Contact Us</a>
+			</nav>
+		</div>
+	</section>
+	<section class="wrapper contact-us-info">
+		<div class="contact-us-info-text">
+			<div class="contact-us-info-text-icon">
+				<iconify-icon
+					icon="ic:round-email"
+					width="12"
+					height="12"></iconify-icon>
+			</div>
+			<p class="text">example@gmai.com</p>
+		</div>
+		<div class="contact-us-info-text">
+			<div class="contact-us-info-text-icon">
+				<iconify-icon
+					icon="ph:map-pin-fill"
+					width="12"
+					height="12"></iconify-icon>
+			</div>
+			<p class="text">
+				123 Anywhere Street, Any City, <br />
+				12345 ST, Indonesia
+			</p>
+		</div>
+		<div class="contact-us-info-text">
+			<div class="contact-us-info-text-icon">
+				<iconify-icon
+					icon="ic:round-phone"
+					width="12"
+					height="12"></iconify-icon>
+			</div>
+			<p class="text">+123 456 7890</p>
+		</div>
+	</section>
+	<section class="wrapper">
+		<div class="contact-us-form-cont">
+			<img src="{% static '/assets/images/contact-us-img.png' %}" alt="" />
+			<form class="contact-us-form">
+				<h2 class="section-title">Our Contact Details</h2>
+				<p class="text">
+					We'd love to hear from you! Please fill out the form below and we'll
+					get back to you as soon as possible.
+				</p>
+				<div class="contact-us-form-inputs">
+					<div class="contact-us-form-input">
+						<label for="">First Name</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Last Name</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Email Address*</label>
+						<input type="text" />
+					</div>
+					<div class="contact-us-form-input">
+						<label for="">Service</label>
+						<input type="text" />
+					</div>
+				</div>
+				<div class="contact-us-form-input">
+					<label for="">Comments / Questions</label>
+					<textarea name="" id=""></textarea>
+				</div>
+				<button class="btn bg-orange">Send Message</button>
+			</form>
+		</div>
+	</section>
+</main>
+{%endblock main%}
